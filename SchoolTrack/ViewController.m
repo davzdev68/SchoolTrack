@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic)NSString *base;
 @end
 
 @implementation ViewController
@@ -18,6 +19,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)calendarButtonTapped:(id)sender {
+    
+    //OPEN pop-over w/ calendar options
+    
+}
+
+- (IBAction)assignmentsButtonTapped:(id)sender {
+    
+    //OPEN Assignments (task) list
+    
+}
+
+- (IBAction)eventsButtonTapped:(id)sender {
+    
+    //OPEN Events list
+
+}
+
+- (IBAction)addTaskButtonTapped:(id)sender {
+    
+    //LOAD Add Assignment view
+    
+}
+
+- (IBAction)addEventButtonTapped:(id)sender {
+    
+    //LOAD Add Event view
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
