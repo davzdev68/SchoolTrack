@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB31D9261BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png in Resources */ = {isa = PBXBuildFile; fileRef = DB31D9251BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png */; settings = {ASSET_TAGS = (); }; };
+		DB31D9291BD9B85200466A9E /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB31D9281BD9B85200466A9E /* AppearanceController.m */; settings = {ASSET_TAGS = (); }; };
 		DBFC65051BD2D4F900C5304C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65041BD2D4F900C5304C /* main.m */; };
 		DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65071BD2D4F900C5304C /* AppDelegate.m */; };
 		DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC650A1BD2D4F900C5304C /* ViewController.m */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		DB31D9251BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkbox_bluebox_blackcheck.png; sourceTree = "<group>"; };
+		DB31D9271BD9B85200466A9E /* AppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceController.h; sourceTree = "<group>"; };
+		DB31D9281BD9B85200466A9E /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		DBFC65001BD2D4F900C5304C /* SchoolTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFC65041BD2D4F900C5304C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBFC65061BD2D4F900C5304C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +95,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB31D92A1BD9BCD900466A9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBFC657B1BD7134200C5304C /* Tasks.h */,
+				DBFC657C1BD7134200C5304C /* Tasks.m */,
+				DBFC657E1BD7135500C5304C /* TaskController.h */,
+				DBFC657F1BD7135500C5304C /* TaskController.m */,
+				DBFC65811BD7136900C5304C /* Events.h */,
+				DBFC65821BD7136900C5304C /* Events.m */,
+				DBFC65841BD713A800C5304C /* EventController.h */,
+				DBFC65851BD713A800C5304C /* EventController.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB31D92B1BD9BE4F00466A9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBFC65091BD2D4F900C5304C /* ViewController.h */,
+				DBFC650A1BD2D4F900C5304C /* ViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		DBFC64F71BD2D4F900C5304C = {
 			isa = PBXGroup;
 			children = (
@@ -117,16 +144,10 @@
 			children = (
 				DBFC65061BD2D4F900C5304C /* AppDelegate.h */,
 				DBFC65071BD2D4F900C5304C /* AppDelegate.m */,
-				DBFC65091BD2D4F900C5304C /* ViewController.h */,
-				DBFC650A1BD2D4F900C5304C /* ViewController.m */,
-				DBFC657B1BD7134200C5304C /* Tasks.h */,
-				DBFC657C1BD7134200C5304C /* Tasks.m */,
-				DBFC657E1BD7135500C5304C /* TaskController.h */,
-				DBFC657F1BD7135500C5304C /* TaskController.m */,
-				DBFC65811BD7136900C5304C /* Events.h */,
-				DBFC65821BD7136900C5304C /* Events.m */,
-				DBFC65841BD713A800C5304C /* EventController.h */,
-				DBFC65851BD713A800C5304C /* EventController.m */,
+				DB31D92B1BD9BE4F00466A9E /* Views */,
+				DB31D92A1BD9BCD900466A9E /* Model */,
+				DB31D9271BD9B85200466A9E /* AppearanceController.h */,
+				DB31D9281BD9B85200466A9E /* AppearanceController.m */,
 				DBFC650C1BD2D4F900C5304C /* Main.storyboard */,
 				DBFC650F1BD2D4F900C5304C /* Assets.xcassets */,
 				DB31D9251BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png */,
@@ -302,6 +323,7 @@
 				DBFC657D1BD7134200C5304C /* Tasks.m in Sources */,
 				DBFC65861BD713A800C5304C /* EventController.m in Sources */,
 				DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */,
+				DB31D9291BD9B85200466A9E /* AppearanceController.m in Sources */,
 				DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */,
 				DBFC65051BD2D4F900C5304C /* main.m in Sources */,
 			);
