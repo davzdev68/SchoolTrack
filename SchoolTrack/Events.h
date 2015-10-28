@@ -18,5 +18,4 @@
 @property (strong, nonatomic)NSDate * alertDate;
 @property (strong, nonatomic)NSDate * alertTime;
 
-
 @end
