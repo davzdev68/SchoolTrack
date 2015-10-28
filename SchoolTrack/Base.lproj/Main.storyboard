@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkbox_bluebox_blackcheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="uOi-QF-OwL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Checkbox_bluebox_blackcheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="uOi-QF-OwL">
                                 <rect key="frame" x="241" y="88" width="119" height="120"/>
                                 <animations/>
                                 <constraints>
@@ -34,7 +34,7 @@
                                     <rect key="frame" x="140" y="100" width="120" height="120"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SchoolTrack" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-ey-FRk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SchoolTrack" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-ey-FRk">
                                 <rect key="frame" x="173" y="226" width="255" height="74"/>
                                 <animations/>
                                 <constraints>
@@ -205,19 +205,19 @@
                                 <exclude reference="QnM-02-cr9"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WYO-wo-wkm"/>
+                                <exclude reference="rMD-rf-JaI"/>
+                                <exclude reference="JNT-mI-KjY"/>
+                                <exclude reference="d2E-fv-bG2"/>
+                                <exclude reference="TkR-OQ-1jG"/>
+                                <exclude reference="fKg-CW-z5E"/>
+                                <exclude reference="dBr-T1-fWk"/>
+                                <exclude reference="u9o-J7-Z8c"/>
+                                <exclude reference="wvi-Cf-tpt"/>
                                 <exclude reference="Zgt-rZ-b6r"/>
                                 <exclude reference="hNu-hc-3qf"/>
                                 <exclude reference="i54-Na-Kje"/>
                                 <exclude reference="s52-0e-5FM"/>
-                                <exclude reference="WYO-wo-wkm"/>
-                                <exclude reference="rMD-rf-JaI"/>
-                                <exclude reference="TkR-OQ-1jG"/>
-                                <exclude reference="fKg-CW-z5E"/>
-                                <exclude reference="JNT-mI-KjY"/>
-                                <exclude reference="d2E-fv-bG2"/>
-                                <exclude reference="dBr-T1-fWk"/>
-                                <exclude reference="u9o-J7-Z8c"/>
-                                <exclude reference="wvi-Cf-tpt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -228,21 +228,21 @@
                                 <include reference="QnM-02-cr9"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="WYO-wo-wkm"/>
+                                <include reference="rMD-rf-JaI"/>
+                                <include reference="JNT-mI-KjY"/>
+                                <include reference="d2E-fv-bG2"/>
+                                <include reference="TkR-OQ-1jG"/>
+                                <include reference="fKg-CW-z5E"/>
+                                <include reference="dBr-T1-fWk"/>
+                                <include reference="u9o-J7-Z8c"/>
+                                <include reference="wvi-Cf-tpt"/>
                                 <exclude reference="THG-MG-u8d"/>
                                 <include reference="Zgt-rZ-b6r"/>
                                 <include reference="hNu-hc-3qf"/>
                                 <include reference="i54-Na-Kje"/>
                                 <exclude reference="oei-Yq-Xg5"/>
                                 <include reference="s52-0e-5FM"/>
-                                <include reference="WYO-wo-wkm"/>
-                                <include reference="rMD-rf-JaI"/>
-                                <include reference="TkR-OQ-1jG"/>
-                                <include reference="fKg-CW-z5E"/>
-                                <include reference="JNT-mI-KjY"/>
-                                <include reference="d2E-fv-bG2"/>
-                                <include reference="dBr-T1-fWk"/>
-                                <include reference="u9o-J7-Z8c"/>
-                                <include reference="wvi-Cf-tpt"/>
                             </mask>
                         </variation>
                     </view>
@@ -389,7 +389,7 @@
                                     <rect key="frame" x="38" y="196" width="325" height="87"/>
                                 </variation>
                             </textView>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W4J-5O-R12">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="W4J-5O-R12">
                                 <rect key="frame" x="138" y="314" width="325" height="56"/>
                                 <animations/>
                                 <constraints>
@@ -405,7 +405,7 @@
                                     <rect key="frame" x="40" y="337" width="229" height="56"/>
                                 </variation>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date Due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoa-cZ-u7u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoa-cZ-u7u">
                                 <rect key="frame" x="138" y="285" width="79" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -538,10 +538,10 @@
                                 <exclude reference="aTh-kv-eVB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Raz-mG-dgh"/>
-                                <exclude reference="Lsl-eR-bfO"/>
                                 <exclude reference="fws-DL-PNI"/>
                                 <exclude reference="gZa-GF-0r3"/>
+                                <exclude reference="Raz-mG-dgh"/>
+                                <exclude reference="Lsl-eR-bfO"/>
                                 <exclude reference="6N1-VS-4fG"/>
                                 <exclude reference="OZ5-Mi-8mp"/>
                             </mask>
