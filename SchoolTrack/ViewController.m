@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TaskController.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [[TaskController sharedInstance] createTaskWithName:@"Math Ch3 Worksheet" detail:@"Working with exponents" dueDate:[NSDate date] alertDate:[NSDate date] alertTime:[NSDate date]];
 }
 
 - (IBAction)calendarButtonTapped:(id)sender {

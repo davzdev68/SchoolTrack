@@ -1,5 +1,5 @@
 //
-//  Events.h
+//  Tasks.h
 //  SchoolTrack
 //
 //  Created by David Flake on 10/27/15.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Events : NSManagedObject
+@interface Tasks : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -19,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "Events+CoreDataProperties.h"
+#import "Tasks+CoreDataProperties.h"

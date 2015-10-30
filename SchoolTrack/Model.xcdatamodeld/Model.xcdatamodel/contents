@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Events" representedClassName="Events" syncable="YES">
+        <attribute name="eventAlertDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventAlertTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventEndTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventStartTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+        <attribute name="taskAlertDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskAlertTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskDueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="taskName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tasks" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Events" positionX="-54" positionY="27" width="128" height="150"/>
+    </elements>
+</model>

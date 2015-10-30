@@ -11,6 +11,13 @@
 		DB31D9291BD9B85200466A9E /* AppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB31D9281BD9B85200466A9E /* AppearanceController.m */; settings = {ASSET_TAGS = (); }; };
 		DB31D92D1BDDF14C00466A9E /* complete_360.png in Resources */ = {isa = PBXBuildFile; fileRef = DB31D92C1BDDF14C00466A9E /* complete_360.png */; settings = {ASSET_TAGS = (); }; };
 		DB31D92F1BDDF15600466A9E /* incomplete_360.png in Resources */ = {isa = PBXBuildFile; fileRef = DB31D92E1BDDF15600466A9E /* incomplete_360.png */; settings = {ASSET_TAGS = (); }; };
+		DB9E5BD91BE06EDA0094D989 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5BD81BE06EDA0094D989 /* Stack.m */; settings = {ASSET_TAGS = (); }; };
+		DB9E5BDC1BE08F5C0094D989 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9E5BDB1BE08F5C0094D989 /* CoreData.framework */; };
+		DB9E5BDF1BE08FEC0094D989 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5BDD1BE08FEC0094D989 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		DB9E5BFD1BE096B50094D989 /* Tasks+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5BFA1BE096B50094D989 /* Tasks+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		DB9E5BFE1BE096B50094D989 /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5BFC1BE096B50094D989 /* Tasks.m */; settings = {ASSET_TAGS = (); }; };
+		DB9E5C031BE098F30094D989 /* Events+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5C001BE098F30094D989 /* Events+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		DB9E5C041BE098F30094D989 /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E5C021BE098F30094D989 /* Events.m */; settings = {ASSET_TAGS = (); }; };
 		DBFC65051BD2D4F900C5304C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65041BD2D4F900C5304C /* main.m */; };
 		DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65071BD2D4F900C5304C /* AppDelegate.m */; };
 		DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC650A1BD2D4F900C5304C /* ViewController.m */; };
@@ -19,9 +26,7 @@
 		DBFC65131BD2D4F900C5304C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFC65111BD2D4F900C5304C /* LaunchScreen.storyboard */; };
 		DBFC651E1BD2D4F900C5304C /* SchoolTrackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC651D1BD2D4F900C5304C /* SchoolTrackTests.m */; };
 		DBFC65291BD2D4F900C5304C /* SchoolTrackUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65281BD2D4F900C5304C /* SchoolTrackUITests.m */; };
-		DBFC657D1BD7134200C5304C /* Tasks.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC657C1BD7134200C5304C /* Tasks.m */; settings = {ASSET_TAGS = (); }; };
 		DBFC65801BD7135500C5304C /* TaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC657F1BD7135500C5304C /* TaskController.m */; settings = {ASSET_TAGS = (); }; };
-		DBFC65831BD7136900C5304C /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65821BD7136900C5304C /* Events.m */; settings = {ASSET_TAGS = (); }; };
 		DBFC65861BD713A800C5304C /* EventController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65851BD713A800C5304C /* EventController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,18 @@
 		DB31D9281BD9B85200466A9E /* AppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceController.m; sourceTree = "<group>"; };
 		DB31D92C1BDDF14C00466A9E /* complete_360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = complete_360.png; sourceTree = "<group>"; };
 		DB31D92E1BDDF15600466A9E /* incomplete_360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incomplete_360.png; sourceTree = "<group>"; };
+		DB9E5BD71BE06EDA0094D989 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		DB9E5BD81BE06EDA0094D989 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		DB9E5BDB1BE08F5C0094D989 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DB9E5BDE1BE08FEC0094D989 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DB9E5BF91BE096B50094D989 /* Tasks+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Tasks+CoreDataProperties.h"; path = "../Tasks+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DB9E5BFA1BE096B50094D989 /* Tasks+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Tasks+CoreDataProperties.m"; path = "../Tasks+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DB9E5BFB1BE096B50094D989 /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tasks.h; path = ../Tasks.h; sourceTree = "<group>"; };
+		DB9E5BFC1BE096B50094D989 /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tasks.m; path = ../Tasks.m; sourceTree = "<group>"; };
+		DB9E5BFF1BE098F30094D989 /* Events+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Events+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DB9E5C001BE098F30094D989 /* Events+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Events+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DB9E5C011BE098F30094D989 /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
+		DB9E5C021BE098F30094D989 /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
 		DBFC65001BD2D4F900C5304C /* SchoolTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFC65041BD2D4F900C5304C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBFC65061BD2D4F900C5304C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,12 +81,8 @@
 		DBFC65241BD2D4F900C5304C /* SchoolTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFC65281BD2D4F900C5304C /* SchoolTrackUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolTrackUITests.m; sourceTree = "<group>"; };
 		DBFC652A1BD2D4F900C5304C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBFC657B1BD7134200C5304C /* Tasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
-		DBFC657C1BD7134200C5304C /* Tasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tasks.m; sourceTree = "<group>"; };
 		DBFC657E1BD7135500C5304C /* TaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskController.h; sourceTree = "<group>"; };
 		DBFC657F1BD7135500C5304C /* TaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskController.m; sourceTree = "<group>"; };
-		DBFC65811BD7136900C5304C /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
-		DBFC65821BD7136900C5304C /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
 		DBFC65841BD713A800C5304C /* EventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventController.h; sourceTree = "<group>"; };
 		DBFC65851BD713A800C5304C /* EventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9E5BDC1BE08F5C0094D989 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,14 +116,19 @@
 		DB31D92A1BD9BCD900466A9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DBFC657B1BD7134200C5304C /* Tasks.h */,
-				DBFC657C1BD7134200C5304C /* Tasks.m */,
-				DBFC657E1BD7135500C5304C /* TaskController.h */,
-				DBFC657F1BD7135500C5304C /* TaskController.m */,
-				DBFC65811BD7136900C5304C /* Events.h */,
-				DBFC65821BD7136900C5304C /* Events.m */,
-				DBFC65841BD713A800C5304C /* EventController.h */,
-				DBFC65851BD713A800C5304C /* EventController.m */,
+				DB9E5BF81BE096750094D989 /* Model Controllers */,
+				DB9E5BFB1BE096B50094D989 /* Tasks.h */,
+				DB9E5BFC1BE096B50094D989 /* Tasks.m */,
+				DB9E5BF91BE096B50094D989 /* Tasks+CoreDataProperties.h */,
+				DB9E5BFA1BE096B50094D989 /* Tasks+CoreDataProperties.m */,
+				DB9E5C011BE098F30094D989 /* Events.h */,
+				DB9E5C021BE098F30094D989 /* Events.m */,
+				DB9E5BFF1BE098F30094D989 /* Events+CoreDataProperties.h */,
+				DB9E5C001BE098F30094D989 /* Events+CoreDataProperties.m */,
+				DB9E5BDD1BE08FEC0094D989 /* Model.xcdatamodeld */,
+				DB9E5BD71BE06EDA0094D989 /* Stack.h */,
+				DB9E5BD81BE06EDA0094D989 /* Stack.m */,
+				DB9E5BDB1BE08F5C0094D989 /* CoreData.framework */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -121,6 +140,30 @@
 				DBFC650A1BD2D4F900C5304C /* ViewController.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		DB9E5BDA1BE08EE00094D989 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				DB31D9271BD9B85200466A9E /* AppearanceController.h */,
+				DB31D9281BD9B85200466A9E /* AppearanceController.m */,
+				DB31D92E1BDDF15600466A9E /* incomplete_360.png */,
+				DB31D92C1BDDF14C00466A9E /* complete_360.png */,
+				DB31D9251BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png */,
+				DBFC650F1BD2D4F900C5304C /* Assets.xcassets */,
+			);
+			name = Appearance;
+			sourceTree = "<group>";
+		};
+		DB9E5BF81BE096750094D989 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBFC657E1BD7135500C5304C /* TaskController.h */,
+				DBFC657F1BD7135500C5304C /* TaskController.m */,
+				DBFC65841BD713A800C5304C /* EventController.h */,
+				DBFC65851BD713A800C5304C /* EventController.m */,
+			);
+			name = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		DBFC64F71BD2D4F900C5304C = {
@@ -150,13 +193,8 @@
 				DBFC65071BD2D4F900C5304C /* AppDelegate.m */,
 				DB31D92B1BD9BE4F00466A9E /* Views */,
 				DB31D92A1BD9BCD900466A9E /* Model */,
-				DB31D9271BD9B85200466A9E /* AppearanceController.h */,
-				DB31D9281BD9B85200466A9E /* AppearanceController.m */,
-				DB31D92E1BDDF15600466A9E /* incomplete_360.png */,
-				DB31D92C1BDDF14C00466A9E /* complete_360.png */,
+				DB9E5BDA1BE08EE00094D989 /* Appearance */,
 				DBFC650C1BD2D4F900C5304C /* Main.storyboard */,
-				DBFC650F1BD2D4F900C5304C /* Assets.xcassets */,
-				DB31D9251BD880AE00466A9E /* Checkbox_bluebox_blackcheck.png */,
 				DBFC65111BD2D4F900C5304C /* LaunchScreen.storyboard */,
 				DBFC65141BD2D4F900C5304C /* Info.plist */,
 				DBFC65031BD2D4F900C5304C /* Supporting Files */,
@@ -326,13 +364,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBFC65831BD7136900C5304C /* Events.m in Sources */,
+				DB9E5C041BE098F30094D989 /* Events.m in Sources */,
+				DB9E5BD91BE06EDA0094D989 /* Stack.m in Sources */,
 				DBFC65801BD7135500C5304C /* TaskController.m in Sources */,
-				DBFC657D1BD7134200C5304C /* Tasks.m in Sources */,
 				DBFC65861BD713A800C5304C /* EventController.m in Sources */,
+				DB9E5BFD1BE096B50094D989 /* Tasks+CoreDataProperties.m in Sources */,
 				DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */,
+				DB9E5C031BE098F30094D989 /* Events+CoreDataProperties.m in Sources */,
 				DB31D9291BD9B85200466A9E /* AppearanceController.m in Sources */,
+				DB9E5BDF1BE08FEC0094D989 /* Model.xcdatamodeld in Sources */,
 				DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */,
+				DB9E5BFE1BE096B50094D989 /* Tasks.m in Sources */,
 				DBFC65051BD2D4F900C5304C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +624,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB9E5BDD1BE08FEC0094D989 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB9E5BDE1BE08FEC0094D989 /* Model.xcdatamodel */,
+			);
+			currentVersion = DB9E5BDE1BE08FEC0094D989 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DBFC64F81BD2D4F900C5304C /* Project object */;
 }
