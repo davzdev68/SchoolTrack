@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (strong, nonatomic)NSString *base;
+
 @end
 
 @implementation ViewController
