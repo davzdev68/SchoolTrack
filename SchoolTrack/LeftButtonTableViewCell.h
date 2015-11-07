@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tasks.h"
+#import "Events.h"
 
 @protocol LeftButtonTableViewCellDelegate
 
@@ -16,8 +18,12 @@
 
 @interface LeftButtonTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *activityButton;
+@property (weak, nonatomic) IBOutlet UIImageView *activityImage;
+@property (weak, nonatomic) IBOutlet UILabel *activityLabel;
+
 @property (weak, nonatomic)id<LeftButtonTableViewCellDelegate> delegate;
 
-- (void)updateWithTask:(Task *)task;
+
 
 @end

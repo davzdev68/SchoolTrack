@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Events.h"
+#import "LeftButtonTableViewCell.h"
 
 @interface EventController : NSObject
+
+@property (nonatomic, strong) NSMutableArray *events;
+
++ (EventController *)sharedInstance;
+
+- (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithEvent:(Events *)event;
 
 @end

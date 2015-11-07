@@ -7,6 +7,9 @@
 //
 
 #import "AssignmentTableViewController.h"
+#import "Tasks.h"
+#import "TaskController.h"
+#import "LeftButtonTableViewCell.h"
 
 @interface AssignmentTableViewController ()
 
@@ -29,21 +32,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Left Button Cell Delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (void)buttonWasTapped:(id)sender {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    
+    Tasks *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
+    
+    tappedTask.isComplete = !tappedTask.isComplete;
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
+#pragma mark - Table view data source
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return [TaskController sharedInstance].tasks.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tasksCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    Tasks *task = [TaskController sharedInstance].tasks[indexPath.row];
+    
+    cell.activityLabel.text = task.taskName;
+
+    [[TaskController sharedInstance] updateCell:cell WithTask:task];
+    
+    return cell;
 }
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"assignmentCell" forIndexPath:indexPath];
     
     // Configure the cell...
     

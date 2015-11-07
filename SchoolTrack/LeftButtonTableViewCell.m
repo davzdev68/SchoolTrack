@@ -7,14 +7,8 @@
 //
 
 #import "LeftButtonTableViewCell.h"
-#import "Tasks.h"
-#import "Events.h"
 
 @interface LeftButtonTableViewCell ()
-
-@property (weak, nonatomic) IBOutlet UIButton *activityButton;
-@property (weak, nonatomic) IBOutlet UIImageView *activityImage;
-@property (weak, nonatomic) IBOutlet UILabel *activityLabel;
 
 @end
 @implementation LeftButtonTableViewCell
@@ -27,17 +21,6 @@
     
     [self.delegate buttonWasTapped:self];
 
-}
-
-- (void)updateWithTask:(Task *)task {
-    
-    self.activityLabel.text = task.name;
-    
-    if (task.isComplete) {
-        self.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
-    } else {
-        self.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
-    }
 }
 
 
