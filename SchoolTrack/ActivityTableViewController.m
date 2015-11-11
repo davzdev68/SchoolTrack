@@ -7,8 +7,14 @@
 //
 
 #import "ActivityTableViewController.h"
+#import "TaskController.h"
+#import "EventController.h"
+#import "LeftButtonTableViewCell.h"
+
 
 @interface ActivityTableViewController ()
+
+@property (nonatomic, strong) NSArray *eventsAndAssignments;
 
 @end
 
@@ -22,6 +28,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self setUpCombinedData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,17 +37,68 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setUpCombinedData {
+    NSArray *tempArray = [NSArray arrayWithArray:[TaskController sharedInstance].tasks];
+    self.eventsAndAssignments = [tempArray arrayByAddingObjectsFromArray:[EventController sharedInstance].events];
+//    self.eventsAndAssignments = [tempArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
+}
+
+#pragma mark - Left Button Cell Delegate
+
+- (void)buttonWasTapped:(id)sender {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    
+    Tasks *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
+    
+    tappedTask.isComplete = !tappedTask.isComplete;
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+//    return [TaskController sharedInstance].tasks.count;
+//    return [EventController sharedInstance].events.count;
+    return self.eventsAndAssignments.count;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"activityCell" forIndexPath:indexPath];
+    
+//    LeftButtonTableViewCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"eventsCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    id activity = self.eventsAndAssignments[indexPath.row];
+    
+    if ([activity isKindOfClass:[Tasks class]]) {
+        Tasks *task = activity;
+        cell.activityLabel.text = task.taskName;
+        [[TaskController sharedInstance] updateCell:cell WithTask:task];
+    } else if ([activity isKindOfClass:[Events class]]) {
+        Events *event = activity;
+        cell.activityLabel.text = event.eventName;
+        [[EventController sharedInstance] updateCell:cell WithEvent:event];
+    }
+
+    return cell;
+}
+
+//- [TaskController (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithTask:(Tasks *)task];
+//
+//
+//- [EventController (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithEvent:(Events *)event];
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

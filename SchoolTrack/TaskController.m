@@ -31,6 +31,8 @@
 
 - (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithTask:(Tasks *)task {
     
+    cell.activityImage.image = [UIImage imageNamed:@"letter_a_orange_96926.jpg"];
+    
     if (task.isComplete) {
         cell.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
     } else {

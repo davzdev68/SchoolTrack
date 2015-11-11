@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TaskController.h"
+#import "EventController.h"
 
 @interface ActivityTableViewController : UITableViewController
 
