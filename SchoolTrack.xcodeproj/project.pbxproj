@@ -31,6 +31,11 @@
 		DB9E5C331BEB012B0094D989 /* letter_e_violet_96969.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB9E5C251BEB012B0094D989 /* letter_e_violet_96969.jpg */; };
 		DB9E5C361BEB06150094D989 /* Blue add.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9E5C351BEB06150094D989 /* Blue add.png */; };
 		DB9E5C381BEB09C00094D989 /* Blue plus.png in Resources */ = {isa = PBXBuildFile; fileRef = DB9E5C371BEB09C00094D989 /* Blue plus.png */; };
+		DBBC05851BF43348000139F2 /* AddTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBC05841BF43348000139F2 /* AddTaskTableViewController.m */; };
+		DBBC05881BF4348C000139F2 /* NameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBC05871BF4348C000139F2 /* NameTableViewCell.m */; };
+		DBBC058B1BF4349B000139F2 /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBC058A1BF4349B000139F2 /* DescriptionTableViewCell.m */; };
+		DBBC058E1BF434AA000139F2 /* DateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBC058D1BF434AA000139F2 /* DateTableViewCell.m */; };
+		DBBC05911BF43C0A000139F2 /* AddEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBC05901BF43C0A000139F2 /* AddEventTableViewController.m */; };
 		DBFC65051BD2D4F900C5304C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65041BD2D4F900C5304C /* main.m */; };
 		DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC65071BD2D4F900C5304C /* AppDelegate.m */; };
 		DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC650A1BD2D4F900C5304C /* ViewController.m */; };
@@ -92,6 +97,16 @@
 		DB9E5C251BEB012B0094D989 /* letter_e_violet_96969.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = letter_e_violet_96969.jpg; sourceTree = "<group>"; };
 		DB9E5C351BEB06150094D989 /* Blue add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue add.png"; sourceTree = "<group>"; };
 		DB9E5C371BEB09C00094D989 /* Blue plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue plus.png"; sourceTree = "<group>"; };
+		DBBC05831BF43348000139F2 /* AddTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskTableViewController.h; sourceTree = "<group>"; };
+		DBBC05841BF43348000139F2 /* AddTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskTableViewController.m; sourceTree = "<group>"; };
+		DBBC05861BF4348C000139F2 /* NameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameTableViewCell.h; sourceTree = "<group>"; };
+		DBBC05871BF4348C000139F2 /* NameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameTableViewCell.m; sourceTree = "<group>"; };
+		DBBC05891BF4349B000139F2 /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
+		DBBC058A1BF4349B000139F2 /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewCell.m; sourceTree = "<group>"; };
+		DBBC058C1BF434AA000139F2 /* DateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTableViewCell.h; sourceTree = "<group>"; };
+		DBBC058D1BF434AA000139F2 /* DateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTableViewCell.m; sourceTree = "<group>"; };
+		DBBC058F1BF43C0A000139F2 /* AddEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventTableViewController.h; sourceTree = "<group>"; };
+		DBBC05901BF43C0A000139F2 /* AddEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventTableViewController.m; sourceTree = "<group>"; };
 		DBFC65001BD2D4F900C5304C /* SchoolTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFC65041BD2D4F900C5304C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBFC65061BD2D4F900C5304C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +182,16 @@
 				DB2CD6A91BED591700AE0B61 /* ActivityTableViewController.m */,
 				DB2CD6AB1BED592700AE0B61 /* AssignmentTableViewController.h */,
 				DB2CD6AC1BED592700AE0B61 /* AssignmentTableViewController.m */,
+				DBBC05831BF43348000139F2 /* AddTaskTableViewController.h */,
+				DBBC05841BF43348000139F2 /* AddTaskTableViewController.m */,
+				DBBC058F1BF43C0A000139F2 /* AddEventTableViewController.h */,
+				DBBC05901BF43C0A000139F2 /* AddEventTableViewController.m */,
+				DBBC05861BF4348C000139F2 /* NameTableViewCell.h */,
+				DBBC05871BF4348C000139F2 /* NameTableViewCell.m */,
+				DBBC05891BF4349B000139F2 /* DescriptionTableViewCell.h */,
+				DBBC058A1BF4349B000139F2 /* DescriptionTableViewCell.m */,
+				DBBC058C1BF434AA000139F2 /* DateTableViewCell.h */,
+				DBBC058D1BF434AA000139F2 /* DateTableViewCell.m */,
 				DB2CD6AE1BED595300AE0B61 /* EventTableViewController.h */,
 				DB2CD6AF1BED595300AE0B61 /* EventTableViewController.m */,
 				DB2CD6B11BEE652700AE0B61 /* LeftButtonTableViewCell.h */,
@@ -442,10 +467,15 @@
 				DBFC65861BD713A800C5304C /* EventController.m in Sources */,
 				DB2CD6B01BED595300AE0B61 /* EventTableViewController.m in Sources */,
 				DBFC650B1BD2D4F900C5304C /* ViewController.m in Sources */,
+				DBBC05881BF4348C000139F2 /* NameTableViewCell.m in Sources */,
 				DB31D9291BD9B85200466A9E /* AppearanceController.m in Sources */,
 				DBFC65081BD2D4F900C5304C /* AppDelegate.m in Sources */,
+				DBBC05911BF43C0A000139F2 /* AddEventTableViewController.m in Sources */,
 				DB2CD6B31BEE652700AE0B61 /* LeftButtonTableViewCell.m in Sources */,
+				DBBC05851BF43348000139F2 /* AddTaskTableViewController.m in Sources */,
 				DBFC65051BD2D4F900C5304C /* main.m in Sources */,
+				DBBC058B1BF4349B000139F2 /* DescriptionTableViewCell.m in Sources */,
+				DBBC058E1BF434AA000139F2 /* DateTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

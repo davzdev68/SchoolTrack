@@ -1,24 +1,21 @@
 //
-//  ActivityTableViewController.m
+//  AddTaskTableViewController.m
 //  SchoolTrack
 //
-//  Created by David Flake on 11/6/15.
+//  Created by David Flake on 11/11/15.
 //  Copyright © 2015 DevMountain. All rights reserved.
 //
 
-#import "ActivityTableViewController.h"
-#import "TaskController.h"
-#import "EventController.h"
-#import "LeftButtonTableViewCell.h"
+#import "AddTaskTableViewController.h"
+#import "NameTableViewCell.h"
+#import "DescriptionTableViewCell.h"
+#import "DateTableViewCell.h"
 
-
-@interface ActivityTableViewController ()
-
-@property (nonatomic, strong) NSArray *eventsAndAssignments;
+@interface AddTaskTableViewController ()
 
 @end
 
-@implementation ActivityTableViewController
+@implementation AddTaskTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,8 +25,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self setUpCombinedData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,70 +32,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setUpCombinedData {
-    NSArray *tempArray = [NSArray arrayWithArray:[TaskController sharedInstance].tasks];
-    self.eventsAndAssignments = [tempArray arrayByAddingObjectsFromArray:[EventController sharedInstance].events];
-//    self.eventsAndAssignments = [tempArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
-}
-
-#pragma mark - Left Button Cell Delegate
-
-- (void)buttonWasTapped:(id)sender {
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    
-    Tasks *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
-    
-    tappedTask.isComplete = !tappedTask.isComplete;
-    
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-}
-
-
 #pragma mark - Table view data source
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.eventsAndAssignments.count;
+    return 4;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"activityCell" forIndexPath:indexPath];
-        
-    // Configure the cell...
-    
-    id activity = self.eventsAndAssignments[indexPath.row];
-    
-    if ([activity isKindOfClass:[Tasks class]]) {
-        Tasks *task = activity;
-        cell.activityLabel.text = task.taskName;
-        [[TaskController sharedInstance] updateCell:cell WithTask:task];
-    } else if ([activity isKindOfClass:[Events class]]) {
-        Events *event = activity;
-        cell.activityLabel.text = event.eventName;
-        [[EventController sharedInstance] updateCell:cell WithEvent:event];
+    switch (indexPath.row) {
+        case 0:
+            return [self nameCell];
+            break;
+        case 1:
+            return [self descrCell];
+        case 2:
+            return [self dateCell];
+        case 3:
+            return [self dateCell];
+        default:
+            return nil;
+            break;
     }
+}
 
+-(NameTableViewCell *)nameCell {
+    NameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"taskCell"];
     return cell;
 }
 
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+-(DescriptionTableViewCell *)descrCell {
+    DescriptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"descrCell"];
     return cell;
 }
-*/
+
+-(DateTableViewCell *)dateCell {
+    DateTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"dateCell"];
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
