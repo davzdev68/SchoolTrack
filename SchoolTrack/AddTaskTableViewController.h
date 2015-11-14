@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DateTableViewCell.h"
 
 @interface AddTaskTableViewController : UITableViewController
+
 
 @end

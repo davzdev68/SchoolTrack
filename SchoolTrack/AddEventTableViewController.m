@@ -32,6 +32,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        return 72;
+    } else if (indexPath.row == 1){
+        return 115;
+    } else if (indexPath.row == 2){
+        return 48;
+//    } else if (indexPath.row == 3){
+//        return 48;
+//    } else if (indexPath.row == 4){
+//        return 48;
+//    } else if (indexPath.row == 5){
+//        return 48;
+    } else {
+        return 48;
+    }
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,29 +59,49 @@
     return 6;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"%@", @(indexPath.row));
+    
     switch (indexPath.row) {
         case 0:
+            
             return [self nameCell];
             break;
+            
         case 1:
+            
             return [self descrCell];
             break;
-        case 2:
-            return [self dateCell];
-            break;
-        case 3:
-            return [self dateCell];
-            break;
-        case 4:
-            return [self dateCell];
-            break;
-        case 5:
-            return [self dateCell];
-            break;
+            
+        case 2: {
+            
+            DateTableViewCell *cell = [self dateCell];
+            cell.dateLabel.text = @"Event Date";
+            
+            return cell;
+        }
+        case 3:{
+            
+            DateTableViewCell *cell = [self dateCell];
+            cell.dateLabel.text = @"Start Time";
+            
+            return cell;
+        }
+        case 4:{
+            
+            DateTableViewCell *cell = [self dateCell];
+            cell.dateLabel.text = @"End Time";
+            
+            return cell;
+        }
+        case 5:{
+            
+            DateTableViewCell *cell = [self dateCell];
+            cell.dateLabel.text = @"Alert";
+            
+            return cell;
+        }
         default:
             return nil;
             break;
@@ -70,16 +110,19 @@
 
 - (NameTableViewCell *)nameCell {
     NameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell"];
+    
     return cell;
 }
 
 - (DescriptionTableViewCell *)descrCell {
     DescriptionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"descrCell"];
+    
     return cell;
 }
 
 - (DateTableViewCell *)dateCell {
     DateTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"dateCell"];
+    
     return cell;
 }
 

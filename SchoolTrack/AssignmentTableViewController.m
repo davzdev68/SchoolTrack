@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tasksCell" forIndexPath:indexPath];
+    LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
     
     // Configure the cell...
     

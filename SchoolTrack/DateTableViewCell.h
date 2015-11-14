@@ -10,4 +10,7 @@
 
 @interface DateTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+
 @end
