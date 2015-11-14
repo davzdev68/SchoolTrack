@@ -16,6 +16,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [EventController new];
+        
+        sharedInstance.events = [NSMutableArray new];
+
+        [sharedInstance setUpMockData2];
+
     });
     return sharedInstance;
 }
@@ -33,16 +38,34 @@
     return cell;
 }
 
--(NSMutableArray *)events {
+- (void)setUpMockData2 {
     
-    Events *event = [Events new];
+    Events *sampleEvent1 = [Events new];
+    sampleEvent1.eventName = @"Bring in the garbage can";
+    sampleEvent1.isComplete = NO;
     
-    event.eventName = @"My First Event";
-    event.isComplete = YES;
+    Events *sampleEvent2 = [Events new];
+    sampleEvent2.eventName = @"Send another check";
+    sampleEvent2.isComplete = YES;
     
-    NSMutableArray *events = @[event];
+    Events *sampleEvent3 = [Events new];
+    sampleEvent3.eventName = @"Call Dad";
+    sampleEvent3.isComplete = NO;
     
-    return events;
+    [self.events addObjectsFromArray:@[sampleEvent1, sampleEvent2, sampleEvent3]];
+    
 }
+
+//-(NSMutableArray *)events {
+//    
+//    Events *event = [Events new];
+//    
+//    event.eventName = @"My First Event";
+//    event.isComplete = YES;
+//    
+//    NSMutableArray *events = @[event];
+//    
+//    return events;
+//}
 
 @end

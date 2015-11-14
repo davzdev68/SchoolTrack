@@ -40,6 +40,7 @@
 - (void)setUpCombinedData {
     NSArray *tempArray = [NSArray arrayWithArray:[TaskController sharedInstance].tasks];
     self.eventsAndAssignments = [tempArray arrayByAddingObjectsFromArray:[EventController sharedInstance].events];
+    // Use this when core data is working.
 //    self.eventsAndAssignments = [tempArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
 }
 
@@ -59,22 +60,23 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return a new section for each header that you want. Today, tomorrow, this week etc...
+    // If there isn't any assignments for that time period don't display the section.
+    return 0;
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    // Based on what section find how many assignments fall in that time period.
     return self.eventsAndAssignments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // In the section show the cells that belong in that time period. Which means you have to cycle through all the activities to find the ones you want.
+    
     LeftButtonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"activityCell" forIndexPath:indexPath];
-        
-    // Configure the cell...
     
     id activity = self.eventsAndAssignments[indexPath.row];
     
