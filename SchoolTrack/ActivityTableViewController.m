@@ -40,6 +40,7 @@
 - (void)setUpCombinedData {
     NSArray *tempArray = [NSArray arrayWithArray:[TaskController sharedInstance].tasks];
     self.eventsAndAssignments = [tempArray arrayByAddingObjectsFromArray:[EventController sharedInstance].events];
+    
     // Use this when core data is working.
 //    self.eventsAndAssignments = [tempArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
 }
@@ -57,14 +58,24 @@
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
+//- (void)buttonWasTapped:(id)sender {
+//    
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+//    
+//    Task *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
+//    
+//    tappedTask.isComplete = !tappedTask.isComplete;
+//    
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//}
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return a new section for each header that you want. Today, tomorrow, this week etc...
-    // If there isn't any assignments for that time period don't display the section.
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    // Return a new section for each header that you want. Today, tomorrow, this week etc...
+//    // If there isn't any assignments for that time period don't display the section.
+//    return 0;
+//}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

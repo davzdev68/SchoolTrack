@@ -56,16 +56,5 @@
     
 }
 
-//-(NSMutableArray *)events {
-//    
-//    Events *event = [Events new];
-//    
-//    event.eventName = @"My First Event";
-//    event.isComplete = YES;
-//    
-//    NSMutableArray *events = @[event];
-//    
-//    return events;
-//}
 
 @end
