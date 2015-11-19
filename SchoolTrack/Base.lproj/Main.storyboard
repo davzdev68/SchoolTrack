@@ -169,7 +169,7 @@
                                     <outlet property="activityButton" destination="Ggs-fo-aEr" id="CuS-Qc-PoB"/>
                                     <outlet property="activityImage" destination="tjJ-e1-u0c" id="nAm-8q-yfi"/>
                                     <outlet property="activityLabel" destination="FBY-fI-qef" id="lvk-I1-a94"/>
-                                    <segue destination="0WK-lr-3YM" kind="show" id="X1T-lm-VNC"/>
+                                    <segue destination="0WK-lr-3YM" kind="show" id="hS6-LY-2hE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -182,7 +182,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7uC-cg-4WD">
                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="0WK-lr-3YM" kind="show" id="KAm-mB-SD6"/>
+                                <segue destination="0WK-lr-3YM" kind="show" id="nzh-lW-LKe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -290,36 +290,49 @@
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateCell" textLabel="2bx-6g-6WX" detailTextLabel="Rqj-Te-GG3" style="IBUITableViewCellStyleValue1" id="GJf-DP-7au" customClass="DateTableViewCell">
-                                <rect key="frame" x="0.0" y="279" width="600" height="72"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dateCell" rowHeight="296" id="Axb-K1-aMu" customClass="DateTableViewCell">
+                                <rect key="frame" x="0.0" y="279" width="600" height="296"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GJf-DP-7au" id="vq3-ma-ugp">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Axb-K1-aMu" id="ldQ-u9-cga">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="296"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2bx-6g-6WX">
-                                            <rect key="frame" x="15" y="27" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detail" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUO-R3-XMx">
+                                            <rect key="frame" x="8" y="8" width="584" height="30"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-Pf-Vzh">
+                                            <rect key="frame" x="8" y="12" width="76" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rqj-Te-GG3">
-                                            <rect key="frame" x="543.5" y="27" width="41.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-ae-yi0">
+                                            <rect key="frame" x="0.0" y="40" width="600" height="256"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <date key="date" timeIntervalSinceReferenceDate="469598579.23254299">
+                                                <!--2015-11-19 04:02:59 +0000-->
+                                            </date>
+                                        </datePicker>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="Laq-Pf-Vzh" firstAttribute="top" secondItem="ldQ-u9-cga" secondAttribute="topMargin" constant="4" id="5eE-OA-TQK"/>
+                                        <constraint firstItem="6Ga-ae-yi0" firstAttribute="leading" secondItem="ldQ-u9-cga" secondAttribute="leading" id="R9v-LO-jzX"/>
+                                        <constraint firstItem="6Ga-ae-yi0" firstAttribute="top" secondItem="qUO-R3-XMx" secondAttribute="bottom" constant="2" id="REW-As-65C"/>
+                                        <constraint firstItem="qUO-R3-XMx" firstAttribute="leading" secondItem="Laq-Pf-Vzh" secondAttribute="leading" id="hq8-q9-K3p"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Ga-ae-yi0" secondAttribute="trailing" id="ivF-kH-Jiw"/>
+                                        <constraint firstItem="qUO-R3-XMx" firstAttribute="top" secondItem="ldQ-u9-cga" secondAttribute="topMargin" id="nds-a6-c3K"/>
+                                        <constraint firstItem="Laq-Pf-Vzh" firstAttribute="leading" secondItem="ldQ-u9-cga" secondAttribute="leadingMargin" id="oCX-xP-fcx"/>
+                                        <constraint firstItem="6Ga-ae-yi0" firstAttribute="centerX" secondItem="qUO-R3-XMx" secondAttribute="centerX" id="pQi-Kv-Dct"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Ga-ae-yi0" secondAttribute="bottom" id="vhQ-2a-7tt"/>
+                                        <constraint firstItem="qUO-R3-XMx" firstAttribute="centerY" secondItem="Laq-Pf-Vzh" secondAttribute="centerY" id="wJF-tf-IQ5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <outlet property="dateLabel" destination="2bx-6g-6WX" id="8eF-3S-Qae"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -333,7 +346,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqE-Oo-NQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3298" y="3283"/>
+            <point key="canvasLocation" x="2987" y="3283"/>
         </scene>
         <!--Add Task Table View Controller-->
         <scene sceneID="s2Z-lg-luY">
@@ -626,9 +639,6 @@
                                 <rect key="frame" x="265" y="360" width="70" height="70"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="Blue plus.png"/>
-                                <connections>
-                                    <segue destination="0WK-lr-3YM" kind="show" id="Onn-xT-Ldg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -821,7 +831,7 @@
         <image name="incomplete_360.png" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nir-Ba-lF9"/>
-        <segue reference="Onn-xT-Ldg"/>
+        <segue reference="nzh-lW-LKe"/>
+        <segue reference="zV3-4s-VYb"/>
     </inferredMetricsTieBreakers>
 </document>
