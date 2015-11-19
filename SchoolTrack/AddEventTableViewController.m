@@ -110,7 +110,6 @@
 
 - (NameTableViewCell *)nameCell {
     NameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell"];
-    
     return cell;
 }
 
@@ -122,7 +121,7 @@
 
 - (DateTableViewCell *)dateCell {
     DateTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"dateCell"];
-    
+    //    cell.eventDate = self.event.name;
     return cell;
 }
 
