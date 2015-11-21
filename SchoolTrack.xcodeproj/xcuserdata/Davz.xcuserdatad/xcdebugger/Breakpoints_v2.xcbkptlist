@@ -2,21 +2,20 @@
 <Bucket
    type = "1"
    version = "2.0">
-<<<<<<< Updated upstream
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SchoolTrack/EventTableViewController.m"
-            timestampString = "469224039.581932"
+            timestampString = "469827247.740735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-buttonWasTapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -27,16 +26,30 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SchoolTrack/ActivityTableViewController.m"
-            timestampString = "469226298.124972"
+            timestampString = "469827247.740735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-buttonWasTapped:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SchoolTrack/ActivityTableViewController.m"
+            timestampString = "469827247.740735"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-buttonWasTapped:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
-=======
->>>>>>> Stashed changes
 </Bucket>

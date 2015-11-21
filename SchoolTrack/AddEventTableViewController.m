@@ -10,6 +10,7 @@
 #import "NameTableViewCell.h"
 #import "DescriptionTableViewCell.h"
 #import "DateTableViewCell.h"
+#import "LeftButtonTableViewCell.h"
 
 @interface AddEventTableViewController ()
 

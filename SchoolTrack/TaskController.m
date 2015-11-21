@@ -29,19 +29,6 @@
     return sharedInstance;
 }
 
-- (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithTask:(Tasks *)task {
-    
-    cell.activityImage.image = [UIImage imageNamed:@"letter_a_orange_96926.jpg"];
-    
-    if (task.isComplete) {
-        cell.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
-    } else {
-        cell.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
-    }
-    
-    return cell;
-}
-
 - (void)setUpMockData {
 
     Tasks *sampleTask1 = [Tasks new];
@@ -55,26 +42,34 @@
     Tasks *sampleTask3 = [Tasks new];
     sampleTask3.taskName = @"Call Mom";
     sampleTask3.isComplete = NO;
+    
+    Tasks *sampleTask4 = [Tasks new];
+    sampleTask4.taskName = @"Take out garbage";
+    sampleTask4.isComplete = NO;
+    
+    Tasks *sampleTask5 = [Tasks new];
+    sampleTask5.taskName = @"Sent check for rent";
+    sampleTask5.isComplete = YES;
+    
+    Tasks *sampleTask6 = [Tasks new];
+    sampleTask6.taskName = @"Call Mom";
+    sampleTask6.isComplete = NO;
+    
+    Tasks *sampleTask7 = [Tasks new];
+    sampleTask7.taskName = @"Sent check for rent";
+    sampleTask7.isComplete = YES;
+    
+    Tasks *sampleTask8 = [Tasks new];
+    sampleTask8.taskName = @"Call Mom";
+    sampleTask8.isComplete = NO;
 
-    [self.tasks addObjectsFromArray:@[sampleTask1, sampleTask2, sampleTask3]];
+    [self.tasks addObjectsFromArray:@[sampleTask1, sampleTask2, sampleTask3, sampleTask4, sampleTask5, sampleTask6, sampleTask7, sampleTask8]];
 
 }
 
 
 
-//+ (TaskController *)sharedInstance {
-//    static TaskController *sharedInstance = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        sharedInstance = [TaskController new];
-//        
-//        sharedInstance.tasks = [NSMutableArray new];
-//        [sharedInstance setUpMockData];
-//        
-//    });
-//    return sharedInstance;
-//}
-//
+
 //- (void)addTask:(Tasks *)task {
 //    
 //    [self.tasks addObject:task];
@@ -88,25 +83,7 @@
 //- (void)updateTask:(Tasks *)task {
 //    
 //}
-//
-//- (void)setUpMockData {
-//    
-//    Task *sampleTask1 = [Task new];
-//    sampleTask1.name = @"Take out garbage";
-//    sampleTask1.isComplete = NO;
-//    
-//    Task *sampleTask2 = [Task new];
-//    sampleTask2.name = @"Sent check for rent";
-//    sampleTask2.isComplete = NO;
-//    
-//    Task *sampleTask3 = [Task new];
-//    sampleTask3.name = @"Call Mom";
-//    sampleTask3.isComplete = NO;
-//    
-//    [self.tasks addObjectsFromArray:@[sampleTask1, sampleTask2, sampleTask3]];
-//    
-//    
-//}
+
 
 //- (void)updateWithTask:(Tasks *)task {
 //    

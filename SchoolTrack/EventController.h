@@ -16,6 +16,4 @@
 
 + (EventController *)sharedInstance;
 
-- (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithEvent:(Events *)event;
-
 @end

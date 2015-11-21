@@ -16,8 +16,6 @@
 
 + (TaskController *)sharedInstance;
 
-- (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithTask:(Tasks *)task;
-
 //- (void)addTask:(Task *)task;
 //- (void)removeTask:(Tasks *)task;
 //- (void)updateTask:(Tasks *)task;

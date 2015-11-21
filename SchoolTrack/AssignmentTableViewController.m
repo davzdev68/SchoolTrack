@@ -10,8 +10,8 @@
 #import "TaskController.h"
 #import "LeftButtonTableViewCell.h"
 
-@interface AssignmentTableViewController ()
-
+@interface AssignmentTableViewController () <
+LeftButtonTableViewCellDelegate>
 @end
 
 @implementation AssignmentTableViewController
@@ -24,6 +24,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,10 +69,12 @@
     // Configure the cell...
     
     Tasks *task = [TaskController sharedInstance].tasks[indexPath.row];
+    cell.delegate = self;
     
     cell.activityLabel.text = task.taskName;
 
-    [[TaskController sharedInstance] updateCell:cell WithTask:task];
+    [cell updateTaskCell:task];
+//    [[TaskController sharedInstance] updateCell:cell WithTask:task];
     
     return cell;
 }

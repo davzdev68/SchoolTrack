@@ -25,19 +25,6 @@
     return sharedInstance;
 }
 
-- (LeftButtonTableViewCell *)updateCell:(LeftButtonTableViewCell *)cell WithEvent:(Events *)event {
-    
-    cell.activityImage.image = [UIImage imageNamed:@"letter_e_blue_96961.jpg"];
-    
-    if (event.isComplete) {
-        cell.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
-    } else {
-        cell.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
-    }
-    
-    return cell;
-}
-
 - (void)setUpMockData2 {
     
     Events *sampleEvent1 = [Events new];
@@ -52,7 +39,27 @@
     sampleEvent3.eventName = @"Call Dad";
     sampleEvent3.isComplete = NO;
     
-    [self.events addObjectsFromArray:@[sampleEvent1, sampleEvent2, sampleEvent3]];
+    Events *sampleEvent4 = [Events new];
+    sampleEvent4.eventName = @"Bring in the garbage can";
+    sampleEvent4.isComplete = NO;
+    
+    Events *sampleEvent5 = [Events new];
+    sampleEvent5.eventName = @"Send another check";
+    sampleEvent5.isComplete = YES;
+    
+    Events *sampleEvent6 = [Events new];
+    sampleEvent6.eventName = @"Call Dad";
+    sampleEvent6.isComplete = NO;
+    
+    Events *sampleEvent7 = [Events new];
+    sampleEvent7.eventName = @"Send another check";
+    sampleEvent7.isComplete = YES;
+    
+    Events *sampleEvent8 = [Events new];
+    sampleEvent8.eventName = @"Call Dad";
+    sampleEvent8.isComplete = NO;
+    
+    [self.events addObjectsFromArray:@[sampleEvent1, sampleEvent2, sampleEvent3, sampleEvent4, sampleEvent5, sampleEvent6, sampleEvent7, sampleEvent8]];
     
 }
 

@@ -23,6 +23,31 @@
 
 }
 
+- (void)updateTaskCell: (Tasks *)task {
+    
+    self.activityImage.image = [UIImage imageNamed:@"letter_a_orange_96926.jpg"];
+    
+    if (task.isComplete) {
+        self.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
+    } else {
+        self.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
+    }
+    
+    //    return cell;
+}
+
+- (void)updateEventCell: (Events *)event {
+    
+    self.activityImage.image = [UIImage imageNamed:@"letter_e_blue_96961.jpg"];
+    
+    if (event.isComplete) {
+        self.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
+    } else {
+        self.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
+    }
+    
+//    return cell;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

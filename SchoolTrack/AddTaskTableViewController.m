@@ -10,6 +10,7 @@
 #import "NameTableViewCell.h"
 #import "DescriptionTableViewCell.h"
 #import "DateTableViewCell.h"
+#import "LeftButtonTableViewCell.h"
 
 @interface AddTaskTableViewController () <UITableViewDelegate>
 
@@ -63,7 +64,6 @@
 
     switch (indexPath.row) {
         case 0:
-            
             
             return [self nameCell];
 

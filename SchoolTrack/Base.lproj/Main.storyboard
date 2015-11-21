@@ -298,20 +298,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detail" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUO-R3-XMx">
-                                            <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="37.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laq-Pf-Vzh">
-                                            <rect key="frame" x="8" y="12" width="76" height="21"/>
+                                            <rect key="frame" x="8" y="16" width="76" height="20.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-ae-yi0">
-                                            <rect key="frame" x="0.0" y="40" width="600" height="256"/>
+                                            <rect key="frame" x="0.0" y="53.5" width="600" height="242.5"/>
                                             <animations/>
                                             <date key="date" timeIntervalSinceReferenceDate="469598579.23254299">
                                                 <!--2015-11-19 04:02:59 +0000-->
@@ -320,9 +320,9 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="Laq-Pf-Vzh" firstAttribute="top" secondItem="ldQ-u9-cga" secondAttribute="topMargin" constant="4" id="5eE-OA-TQK"/>
+                                        <constraint firstItem="Laq-Pf-Vzh" firstAttribute="top" secondItem="ldQ-u9-cga" secondAttribute="topMargin" constant="8" id="5eE-OA-TQK"/>
                                         <constraint firstItem="6Ga-ae-yi0" firstAttribute="leading" secondItem="ldQ-u9-cga" secondAttribute="leading" id="R9v-LO-jzX"/>
-                                        <constraint firstItem="6Ga-ae-yi0" firstAttribute="top" secondItem="qUO-R3-XMx" secondAttribute="bottom" constant="2" id="REW-As-65C"/>
+                                        <constraint firstItem="6Ga-ae-yi0" firstAttribute="top" secondItem="qUO-R3-XMx" secondAttribute="bottom" constant="8" id="REW-As-65C"/>
                                         <constraint firstItem="qUO-R3-XMx" firstAttribute="leading" secondItem="Laq-Pf-Vzh" secondAttribute="leading" id="hq8-q9-K3p"/>
                                         <constraint firstAttribute="trailing" secondItem="6Ga-ae-yi0" secondAttribute="trailing" id="ivF-kH-Jiw"/>
                                         <constraint firstItem="qUO-R3-XMx" firstAttribute="top" secondItem="ldQ-u9-cga" secondAttribute="topMargin" id="nds-a6-c3K"/>
@@ -333,6 +333,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="Laq-Pf-Vzh" id="nRw-P8-qke"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

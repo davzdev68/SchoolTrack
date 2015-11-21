@@ -12,7 +12,8 @@
 #import "LeftButtonTableViewCell.h"
 
 
-@interface ActivityTableViewController ()
+@interface ActivityTableViewController ()<
+LeftButtonTableViewCellDelegate>
 
 @property (nonatomic, strong) NSArray *eventsAndAssignments;
 
@@ -30,6 +31,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self setUpCombinedData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,12 +57,30 @@
 - (void)buttonWasTapped:(id)sender {
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+
+    id activity = self.eventsAndAssignments[indexPath.row];
     
-    Tasks *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
+    if ([activity isKindOfClass:[Tasks class]]) {
+        
+        Tasks *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
+        
+        tappedTask.isComplete = !tappedTask.isComplete;
+        
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        
+    }else if ([activity isKindOfClass:[Events class]]) {
+        
+        NSInteger newIndexInt = indexPath.row - [TaskController sharedInstance].tasks.count;
+//        int newRow = newIndexInt intValue;
+//        NSIndexPath *newIndexPath = indexPath[newRow];
+//        
+        Events *tappedEvent = [EventController sharedInstance].events[newIndexInt];
+        
+        tappedEvent.isComplete = !tappedEvent.isComplete;
+        
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
     
-    tappedTask.isComplete = !tappedTask.isComplete;
-    
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 //- (void)buttonWasTapped:(id)sender {
@@ -94,11 +119,19 @@
     if ([activity isKindOfClass:[Tasks class]]) {
         Tasks *task = activity;
         cell.activityLabel.text = task.taskName;
-        [[TaskController sharedInstance] updateCell:cell WithTask:task];
+        
+        cell.delegate = self;
+
+        [cell updateTaskCell:task];
+        //        [[TaskController sharedInstance] updateCell:cell WithTask:task];
     } else if ([activity isKindOfClass:[Events class]]) {
         Events *event = activity;
         cell.activityLabel.text = event.eventName;
-        [[EventController sharedInstance] updateCell:cell WithEvent:event];
+        
+        cell.delegate = self;
+
+        [cell updateEventCell:event];
+//        [[EventController sharedInstance] updateCell:cell WithEvent:event];
     }
 
     return cell;

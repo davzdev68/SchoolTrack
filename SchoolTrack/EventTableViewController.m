@@ -10,7 +10,8 @@
 #import "EventController.h"
 #import "LeftButtonTableViewCell.h"
 
-@interface EventTableViewController ()
+@interface EventTableViewController ()<
+LeftButtonTableViewCellDelegate>
 
 @end
 
@@ -26,9 +27,29 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self.tableView reloadData];
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Left Button Cell Delegate
+
+- (void)buttonWasTapped:(id)sender {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    
+    Events *tappedEvent = [EventController sharedInstance].events[indexPath.row];
+    
+    tappedEvent.isComplete = !tappedEvent.isComplete;
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 #pragma mark - Table view data source
@@ -51,9 +72,12 @@
     
     Events *event = [EventController sharedInstance].events[indexPath.row];
     
+    cell.delegate = self;
+
     cell.activityLabel.text = event.eventName;
     
-    [[EventController sharedInstance] updateCell:cell WithEvent:event];
+    [cell updateEventCell:event];
+//    [[EventController sharedInstance] updateCell:cell WithEvent:event];
     
     return cell;
 }

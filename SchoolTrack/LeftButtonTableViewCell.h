@@ -24,6 +24,8 @@
 
 @property (weak, nonatomic)id<LeftButtonTableViewCellDelegate> delegate;
 
+- (void)updateTaskCell: (Tasks *)task;
+- (void)updateEventCell: (Events *)event;
 
 
 @end

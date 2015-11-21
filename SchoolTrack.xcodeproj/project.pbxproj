@@ -182,6 +182,8 @@
 				DB2CD6A91BED591700AE0B61 /* ActivityTableViewController.m */,
 				DB2CD6AB1BED592700AE0B61 /* AssignmentTableViewController.h */,
 				DB2CD6AC1BED592700AE0B61 /* AssignmentTableViewController.m */,
+				DB2CD6AE1BED595300AE0B61 /* EventTableViewController.h */,
+				DB2CD6AF1BED595300AE0B61 /* EventTableViewController.m */,
 				DBBC05831BF43348000139F2 /* AddTaskTableViewController.h */,
 				DBBC05841BF43348000139F2 /* AddTaskTableViewController.m */,
 				DBBC058F1BF43C0A000139F2 /* AddEventTableViewController.h */,
@@ -192,8 +194,6 @@
 				DBBC058A1BF4349B000139F2 /* DescriptionTableViewCell.m */,
 				DBBC058C1BF434AA000139F2 /* DateTableViewCell.h */,
 				DBBC058D1BF434AA000139F2 /* DateTableViewCell.m */,
-				DB2CD6AE1BED595300AE0B61 /* EventTableViewController.h */,
-				DB2CD6AF1BED595300AE0B61 /* EventTableViewController.m */,
 				DB2CD6B11BEE652700AE0B61 /* LeftButtonTableViewCell.h */,
 				DB2CD6B21BEE652700AE0B61 /* LeftButtonTableViewCell.m */,
 			);
