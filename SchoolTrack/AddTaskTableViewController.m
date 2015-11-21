@@ -14,7 +14,6 @@
 
 @interface AddTaskTableViewController () <UITableViewDelegate>
 
-
 @end
 
 @implementation AddTaskTableViewController
@@ -41,11 +40,11 @@
     } else if (indexPath.row == 1){
         return 115;
     } else if (indexPath.row == 2){
-        return 48;
+        return 250;
 //    } else if (indexPath.row == 3){
 //        return 48;
     } else {
-        return 48;
+        return 46;
     }
     
 }

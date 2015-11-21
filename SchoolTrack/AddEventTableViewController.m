@@ -40,7 +40,7 @@
     } else if (indexPath.row == 1){
         return 115;
     } else if (indexPath.row == 2){
-        return 262;
+        return 250;
 //    } else if (indexPath.row == 3){
 //        return 48;
 //    } else if (indexPath.row == 4){
