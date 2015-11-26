@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Events.h"
 
 @interface AddEventTableViewController : UITableViewController
+
+@property (nonatomic, copy) void (^didSave)();
 
 @end

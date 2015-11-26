@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DateTableViewCell.h"
+#import "Events.h"
 
 @interface AddTaskTableViewController : UITableViewController
 
+@property (nonatomic, copy) void (^didSave)();
 
 @end

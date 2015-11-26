@@ -12,7 +12,9 @@
 #import "DateTableViewCell.h"
 #import "LeftButtonTableViewCell.h"
 
-@interface AddTaskTableViewController () <UITableViewDelegate>
+@interface AddTaskTableViewController () <DateTableViewCellDelegate>
+
+@property (nonatomic, assign) NSInteger currentDateCellIndex;
 
 @end
 
@@ -20,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.currentDateCellIndex = -1;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -33,16 +37,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)saveTapped:(id)sender {
+    if (self.didSave) {
+        // Save task?
+        self.didSave();
+    }
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    NSInteger expandedDateRowHeight = 250;
+    NSInteger collapsedDateRowHeight = 46;
+
     if (indexPath.row == 0) {
         return 72;
     } else if (indexPath.row == 1){
         return 115;
     } else if (indexPath.row == 2){
-        return 250;
-//    } else if (indexPath.row == 3){
-//        return 48;
+        if (self.currentDateCellIndex == 2) {
+            return expandedDateRowHeight;
+        } else {
+            return collapsedDateRowHeight;
+        }
+    } else if (indexPath.row == 3){
+        if (self.currentDateCellIndex == 3) {
+            return expandedDateRowHeight;
+        } else {
+            return collapsedDateRowHeight;
+        }
     } else {
         return 46;
     }
@@ -65,15 +87,17 @@
         case 0:
             
             return [self nameCell];
+            break;
 
-            //break;
         case 1:
             
             return [self descrCell];
+            break;
             
         case 2: {
             
             DateTableViewCell *cell = [self dateCell];
+            cell.datePicker.datePickerMode = UIDatePickerModeDate;
             cell.dateLabel.text = @"Due Date";
             
             return cell;
@@ -83,8 +107,11 @@
             DateTableViewCell *cell = [self dateCell];
             cell.dateLabel.text = @"Alert";
             
-            return cell;
+//            NSDate *date = magicCoreDataCallToGetDate();
+//            [cell.datePicker setDate:date animated:YES];
+//            cell.dateDetail.text = @"The formatted date";
             
+            return cell;
         }
         default:
             return nil;
@@ -106,9 +133,48 @@
 
 -(DateTableViewCell *)dateCell {
     DateTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"dateCell"];
+    cell.delegate = self;
+    //    cell.taskDate = self.task.name;
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row > 1) {
+        if (indexPath.row == self.currentDateCellIndex) {
+            self.currentDateCellIndex = -1;
+        } else {
+            self.currentDateCellIndex = indexPath.row;
+        }
+        [self.tableView beginUpdates];
+        [self.tableView endUpdates];
+    }
+}
+
+-(void)dateCell:(DateTableViewCell *)cell datePickerDidChange:(UIDatePicker *)picker {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSLog(@"Date picker changed for row: %@", @(indexPath.row));
+    // TODO: Save in CoreData and reload table view
+    //    picker.date;
+}
+
+
+
+#pragma mark - CRUD
+
+
+
+
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    [segue AssignmentTableViewController];
+//}
 
 /*
 // Override to support conditional editing of the table view.
@@ -144,14 +210,8 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end

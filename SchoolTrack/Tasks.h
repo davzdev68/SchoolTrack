@@ -15,5 +15,6 @@
 @property (strong, nonatomic)NSDate * dueDate;
 @property (strong, nonatomic)NSDate * alertDate;
 @property (assign, nonatomic) BOOL isComplete;
+@property (assign, nonatomic) BOOL setDate;
 
 @end

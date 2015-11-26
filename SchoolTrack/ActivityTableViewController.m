@@ -83,17 +83,6 @@ LeftButtonTableViewCellDelegate>
     
 }
 
-//- (void)buttonWasTapped:(id)sender {
-//    
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-//    
-//    Task *tappedTask = [TaskController sharedInstance].tasks[indexPath.row];
-//    
-//    tappedTask.isComplete = !tappedTask.isComplete;
-//    
-//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-//}
-
 #pragma mark - Table view data source
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
