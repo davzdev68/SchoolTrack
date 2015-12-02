@@ -9,6 +9,12 @@
 #import "EventController.h"
 #import "Events.h"
 
+@interface EventController()
+
+@property (strong, nonatomic) NSMutableArray *events;
+
+@end
+
 @implementation EventController
 
 + (EventController *)sharedInstance {

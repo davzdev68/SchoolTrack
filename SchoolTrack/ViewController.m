@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "AddTaskTableViewController.h"
+#import "AddEventTableViewController.h"
 
 @interface ViewController ()
 
 @property (strong, nonatomic)NSString *base;
+@property(nonatomic, retain) UITableView *tableView;
 
 @end
 
@@ -28,4 +31,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Task"]) {
+        AddTaskTableViewController *controller = (AddTaskTableViewController *)segue.destinationViewController;
+        controller.didSave = ^{
+            // Save task?
+            [self.navigationController popViewControllerAnimated:YES];
+            [self.tableView reloadData];
+        };
+    }
+    
+    if ([segue.identifier isEqualToString:@"Event"]) {
+        AddEventTableViewController *controller = (AddEventTableViewController *)segue.destinationViewController;
+        controller.didSave = ^{
+            // Save event?
+            [self.navigationController popViewControllerAnimated:YES];
+            [self.tableView reloadData];
+        };
+    }
+}
 @end

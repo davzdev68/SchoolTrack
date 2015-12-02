@@ -51,7 +51,7 @@ LeftButtonTableViewCellDelegate>
     Events *tappedEvent = [EventController sharedInstance].events[indexPath.row];
     
     tappedEvent.isComplete = !tappedEvent.isComplete;
-    
+        
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 

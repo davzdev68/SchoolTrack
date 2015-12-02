@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, copy) void (^didSave)();
 
 @end
 

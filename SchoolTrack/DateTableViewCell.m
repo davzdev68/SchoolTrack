@@ -18,6 +18,7 @@
 - (IBAction)datePickerChanged:(UIDatePicker *)sender {
     NSLog(@"Date picker changed: %@", self.datePicker.date);
     [self.delegate dateCell:self datePickerDidChange:self.datePicker];
+    self.dateDetail.text = [NSString stringWithFormat:@"%@", self.datePicker.date];
 }
 
 

@@ -12,7 +12,7 @@
 
 @interface EventController : NSObject
 
-@property (nonatomic, strong) NSMutableArray *events;
+@property (strong, nonatomic, readonly) NSMutableArray *events;
 
 + (EventController *)sharedInstance;
 

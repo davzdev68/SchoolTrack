@@ -88,7 +88,7 @@
                                     <outlet property="activityButton" destination="WAW-rW-aZn" id="vzD-UM-2OO"/>
                                     <outlet property="activityImage" destination="52r-SH-qZu" id="2VO-YZ-C6T"/>
                                     <outlet property="activityLabel" destination="aTX-tL-lXV" id="IB4-jz-nZC"/>
-                                    <segue destination="iUZ-W7-6yw" kind="show" id="zV3-4s-VYb"/>
+                                    <segue destination="iUZ-W7-6yw" kind="show" identifier="Edit" id="zV3-4s-VYb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,7 +101,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BYS-zb-f5r">
                             <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="iUZ-W7-6yw" kind="show" id="TpJ-yK-bGw"/>
+                                <segue destination="iUZ-W7-6yw" kind="show" identifier="New" id="TpJ-yK-bGw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -308,14 +308,14 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8B-kP-r44">
-                                            <rect key="frame" x="508" y="16" width="84" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8B-kP-r44">
+                                            <rect key="frame" x="508" y="16" width="84" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="84" id="nXJ-YT-pmk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-ae-yi0">
@@ -483,7 +483,7 @@
                                                 <!--2015-11-21 19:52:10 +0000-->
                                             </date>
                                         </datePicker>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-cF-sNo">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-cF-sNo">
                                             <rect key="frame" x="505" y="12" width="87" height="21"/>
                                             <animations/>
                                             <constraints>
@@ -491,7 +491,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="YP3-TT-ZzQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -687,7 +687,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Blue plus.png"/>
                                 <connections>
-                                    <segue destination="iUZ-W7-6yw" kind="show" id="nir-Ba-lF9"/>
+                                    <segue destination="iUZ-W7-6yw" kind="show" identifier="Task" id="nir-Ba-lF9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csq-mI-jnv">
@@ -695,7 +695,7 @@
                                 <animations/>
                                 <state key="normal" title="Button" image="Blue plus.png"/>
                                 <connections>
-                                    <segue destination="0WK-lr-3YM" kind="show" id="dQi-b9-hMA"/>
+                                    <segue destination="0WK-lr-3YM" kind="show" identifier="Event" id="dQi-b9-hMA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -889,7 +889,7 @@
         <image name="incomplete_360.png" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YhJ-ey-Bim"/>
-        <segue reference="hS6-LY-2hE"/>
+        <segue reference="dQi-b9-hMA"/>
+        <segue reference="nir-Ba-lF9"/>
     </inferredMetricsTieBreakers>
 </document>

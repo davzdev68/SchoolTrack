@@ -29,6 +29,12 @@
     
     if (task.isComplete) {
         self.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
+        
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:self.activityLabel.text];
+        [string addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [string length])];
+        
+        self.activityLabel.attributedText = string;
+        
     } else {
         self.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
     }
@@ -42,6 +48,12 @@
     
     if (event.isComplete) {
         self.activityButton.imageView.image = [UIImage imageNamed:@"complete_360"];
+        
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:self.activityLabel.text];
+        [string addAttribute:NSStrikethroughStyleAttributeName value:@2 range:NSMakeRange(0, [string length])];
+        
+        self.activityLabel.attributedText = string;
+        
     } else {
         self.activityButton.imageView.image = [UIImage imageNamed:@"incomplete_360"];
     }
