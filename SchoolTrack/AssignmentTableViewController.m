@@ -9,6 +9,7 @@
 #import "AssignmentTableViewController.h"
 #import "TaskController.h"
 #import "LeftButtonTableViewCell.h"
+#import "AddTaskTableViewController.h"
 
 @interface AssignmentTableViewController () <
 LeftButtonTableViewCellDelegate>
@@ -69,6 +70,7 @@ LeftButtonTableViewCellDelegate>
     // Configure the cell...
     
     Tasks *task = [TaskController sharedInstance].tasks[indexPath.row];
+    
     cell.delegate = self;
     
     cell.activityLabel.text = task.taskName;
@@ -78,8 +80,6 @@ LeftButtonTableViewCellDelegate>
     
     return cell;
 }
-
-
 
 
 /*
@@ -116,14 +116,21 @@ LeftButtonTableViewCellDelegate>
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Edit"]) {
+        AddTaskTableViewController *controller = (AddTaskTableViewController *)segue.destinationViewController;
+        controller.didSave = ^{
+            // Save event?
+            [self.navigationController popViewControllerAnimated:YES];
+            [self.tableView reloadData];
+        };
+    }
 }
-*/
+
+
 
 @end

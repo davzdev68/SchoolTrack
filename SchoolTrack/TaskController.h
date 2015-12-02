@@ -18,7 +18,7 @@
 
 
 
-- (void)addTask:(Tasks *)task;
+//- (void)addTask:(Tasks *)task;
 //- (void)removeTask:(Tasks *)task;
 //- (void)updateTask:(Tasks *)task;
 //- (void)updateWithTask:(Tasks *)task;

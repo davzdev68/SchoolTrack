@@ -117,6 +117,7 @@
             
             DateTableViewCell *cell = [self dateCell];
             cell.dateLabel.text = @"Start Time";
+            
 //            NSDate *date = magicCoreDataCallToGetDate();
 //            [cell.datePicker setDate:date animated:YES];
 //            cell.dateDetail.text = @"The formatted date";

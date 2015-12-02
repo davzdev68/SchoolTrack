@@ -70,10 +70,10 @@
 
 
 
-- (void)addTask:(Tasks *)task {
-    
-    [self.tasks addObject:task];
-}
+//- (void)addTask:(Tasks *)task {
+//    
+//    [self.tasks addObject:task];
+//}
 
 //- (void)removeTask:(Tasks *)task{
 //    [self.tasks removeObject:task];
