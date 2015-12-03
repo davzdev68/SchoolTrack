@@ -15,6 +15,7 @@
 @interface AddEventTableViewController () <DateTableViewCellDelegate>
 
 @property (nonatomic, assign) NSInteger currentDateCellIndex;
+@property (nonatomic, assign) BOOL canEdit;
 
 @end
 
@@ -26,15 +27,23 @@
     self.currentDateCellIndex = -1;
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = YES;
+    
+    self.canEdit = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editTapped:)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)editTapped:(id)sender {
+    self.canEdit = !self.canEdit;
+    [self.tableView reloadData];
 }
 
 - (IBAction)saveTapped:(id)sender {
@@ -146,6 +155,11 @@
 
 - (NameTableViewCell *)nameCell {
     NameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell"];
+    if (!self.canEdit) {
+        cell.nameField.enabled = NO;
+    } else {
+        cell.nameField.enabled = YES;
+    }
     return cell;
 }
 

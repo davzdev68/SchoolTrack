@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NameTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 @end

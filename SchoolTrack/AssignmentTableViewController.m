@@ -81,6 +81,21 @@ LeftButtonTableViewCellDelegate>
     return cell;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        // Delete!
+        [self.tableView beginUpdates];
+        [[TaskController sharedInstance] removeTask:[TaskController sharedInstance].tasks[indexPath.row]];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+    }];
+    
+    return @[action];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -121,7 +136,7 @@ LeftButtonTableViewCellDelegate>
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"Edit"]) {
+    if ([segue.identifier isEqualToString:@"Edit"] || [segue.identifier isEqualToString:@"New"]) {
         AddTaskTableViewController *controller = (AddTaskTableViewController *)segue.destinationViewController;
         controller.didSave = ^{
             // Save event?

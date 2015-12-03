@@ -69,5 +69,9 @@
     
 }
 
+- (void)removeEvents:(Events *)events {
+    [self.events removeObject:events];
+}
+
 
 @end

@@ -16,6 +16,7 @@
 
 + (TaskController *)sharedInstance;
 
+- (void)removeTask:(Tasks *)tasks;
 
 
 //- (void)addTask:(Tasks *)task;

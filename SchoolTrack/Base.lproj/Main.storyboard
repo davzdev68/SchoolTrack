@@ -238,6 +238,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="nameField" destination="FiU-sN-wSW" id="kuF-jD-ngM"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="descrCell" rowHeight="115" id="fOS-rm-qKx" customClass="DescriptionTableViewCell">
                                 <rect key="frame" x="0.0" y="164" width="600" height="115"/>
@@ -482,6 +485,9 @@
                                             <date key="date" timeIntervalSinceReferenceDate="469828330.66188103">
                                                 <!--2015-11-21 19:52:10 +0000-->
                                             </date>
+                                            <connections>
+                                                <action selector="datePickerChanged:" destination="Vs7-kl-coB" eventType="valueChanged" id="z2A-zF-ciq"/>
+                                            </connections>
                                         </datePicker>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-cF-sNo">
                                             <rect key="frame" x="505" y="12" width="87" height="21"/>
@@ -516,7 +522,9 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="dateDetail" destination="QSK-cF-sNo" id="Xco-Pd-dKS"/>
                                     <outlet property="dateLabel" destination="S4L-u4-DzD" id="Qd8-Jj-DuM"/>
+                                    <outlet property="datePicker" destination="nYK-g5-5MT" id="eV8-Hc-RHE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -631,7 +639,7 @@
         <!--Home-->
         <scene sceneID="0T1-be-3zZ">
             <objects>
-                <viewController id="53V-PU-gkR" sceneMemberID="viewController">
+                <viewController id="53V-PU-gkR" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ufz-q6-gG3"/>
                         <viewControllerLayoutGuide type="bottom" id="qrD-QR-31z"/>
@@ -787,7 +795,7 @@
                                     <outlet property="activityButton" destination="5iN-Pa-wlM" id="Y8I-xF-xrV"/>
                                     <outlet property="activityImage" destination="fhb-2W-gUG" id="o5y-GQ-5VL"/>
                                     <outlet property="activityLabel" destination="zBF-Pl-gpe" id="nJT-t9-CvF"/>
-                                    <segue destination="iUZ-W7-6yw" kind="show" id="YhJ-ey-Bim"/>
+                                    <segue destination="iUZ-W7-6yw" kind="show" identifier="Edit" id="YhJ-ey-Bim"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -889,7 +897,7 @@
         <image name="incomplete_360.png" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dQi-b9-hMA"/>
-        <segue reference="nir-Ba-lF9"/>
+        <segue reference="YhJ-ey-Bim"/>
+        <segue reference="hS6-LY-2hE"/>
     </inferredMetricsTieBreakers>
 </document>

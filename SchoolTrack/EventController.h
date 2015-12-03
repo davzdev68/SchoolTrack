@@ -16,4 +16,6 @@
 
 + (EventController *)sharedInstance;
 
+- (void)removeEvent:(Events *)events;
+
 @end

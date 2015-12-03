@@ -10,6 +10,10 @@
 #import "TaskController.h"
 #import "EventController.h"
 #import "LeftButtonTableViewCell.h"
+#import "AddTaskTableViewController.h"
+#import "AddEventTableViewController.h"
+#import "TaskController.h"
+#import "EventController.h"
 
 
 @interface ActivityTableViewController ()<
@@ -126,6 +130,59 @@ LeftButtonTableViewCellDelegate>
     return cell;
 }
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Edit"]) {
+        id activity = self.eventsAndAssignments[self.tableView.indexPathForSelectedRow.row];
+        
+        if ([activity isKindOfClass:[Tasks class]]) {
+            // TODO
+            AddTaskTableViewController *controller = (AddTaskTableViewController *)segue.destinationViewController;
+            controller.didSave = ^{
+                //Save event?
+                [self.navigationController popViewControllerAnimated:YES];
+                [self.tableView reloadData];
+
+            };
+        } else if ([activity isKindOfClass:[Events class]]) {
+            AddEventTableViewController *controller = (AddEventTableViewController *)segue.destinationViewController;
+            controller.didSave = ^{
+                // Save event?
+                [self.navigationController popViewControllerAnimated:YES];
+                [self.tableView reloadData];
+            };
+        }
+    }
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        // Delete!
+        [self.tableView beginUpdates];
+        id activity = self.eventsAndAssignments[self.tableView.indexPathForSelectedRow.row];
+        if ([activity isKindOfClass:[Tasks class]]) {
+            [[TaskController sharedInstance] removeTask:[TaskController sharedInstance].tasks[indexPath.row]];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView endUpdates];
+        
+            
+        }else{
+            [[EventController sharedInstance] removeEvent:[EventController sharedInstance].events[indexPath.row]];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView endUpdates];
+        };
+        
+        
+    }];
+
+    return @[action];
+}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
