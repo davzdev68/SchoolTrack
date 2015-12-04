@@ -18,7 +18,23 @@
 - (IBAction)datePickerChanged:(UIDatePicker *)sender {
     NSLog(@"Date picker changed: %@", self.datePicker.date);
     [self.delegate dateCell:self datePickerDidChange:self.datePicker];
-    self.dateDetail.text = [NSString stringWithFormat:@"%@", self.datePicker.date];
+    
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    if ([self.dateLabel.text isEqual: @"Due Date"]) {
+        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+
+    }else{
+        [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    };
+    
+    NSString *formattedDateString = [dateFormatter stringFromDate:self.datePicker.date];
+    NSLog(@"formattedDateString: %@", formattedDateString);
+
+    self.dateDetail.text = [NSString stringWithFormat:@"%@", formattedDateString];
 }
 
 

@@ -40,7 +40,13 @@
         AddTaskTableViewController *controller = (AddTaskTableViewController *)segue.destinationViewController;
         controller.didSave = ^{
             // Save task?
+            
+            if (self.tabBarController.selectedIndex == 0) {
+                self.tabBarController.selectedIndex = 2;
+            }
+            
             [self.navigationController popViewControllerAnimated:YES];
+            
             [self.tableView reloadData];
         };
     }
@@ -49,6 +55,11 @@
         AddEventTableViewController *controller = (AddEventTableViewController *)segue.destinationViewController;
         controller.didSave = ^{
             // Save event?
+            
+            if (self.tabBarController.selectedIndex == 0) {
+                self.tabBarController.selectedIndex = 3;
+            }
+            
             [self.navigationController popViewControllerAnimated:YES];
             [self.tableView reloadData];
         };
